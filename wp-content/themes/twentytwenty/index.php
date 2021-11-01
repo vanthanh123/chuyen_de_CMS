@@ -16,8 +16,14 @@
 
 get_header();
 ?>
+<?php
+$class_custom_post = "";
+if (!is_single()) {
+	$class_custom_post = "content_custom_post";
+}
+?>
 
-<main id="site-content" role="main">
+<main id="site-content" class="<?php echo $class_custom_post; ?>" role="main">
 
 	<?php
 
@@ -83,7 +89,7 @@ get_header();
 		while ( have_posts() ) {
 			$i++;
 			if ( $i > 1 ) {
-				echo '<hr class="post-separator styled-separator is-style-wide section-inner" aria-hidden="true" />';
+				// echo '<hr class="post-separator styled-separator is-style-wide section-inner" aria-hidden="true" />';
 			}
 			the_post();
 
