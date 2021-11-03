@@ -2358,12 +2358,12 @@ function comment_form( $args = array(), $post_id = null ) {
 		'author' => sprintf(
 			'<p class="comment-form-author">%s %s</p>',
 			sprintf(
-				'<label for="author">%s%s</label>',
+				'<label for="author"></label>',
 				__( 'Name' ),
 				( $req ? ' <span class="required">*</span>' : '' )
 			),
 			sprintf(
-				'<input id="author" name="author" type="text" value="%s" size="30" maxlength="245"%s />',
+				'<input id="author" name="author" type="text" value="%s" size="30" placeholder="Name *" maxlength="245"%s />',
 				esc_attr( $commenter['comment_author'] ),
 				$html_req
 			)
@@ -2371,12 +2371,12 @@ function comment_form( $args = array(), $post_id = null ) {
 		'email'  => sprintf(
 			'<p class="comment-form-email">%s %s</p>',
 			sprintf(
-				'<label for="email">%s%s</label>',
+				'<label for="email"></label>',
 				__( 'Email' ),
 				( $req ? ' <span class="required">*</span>' : '' )
 			),
 			sprintf(
-				'<input id="email" name="email" %s value="%s" size="30" maxlength="100" aria-describedby="email-notes"%s />',
+				'<input id="email" name="email" %s value="%s" size="30" maxlength="100" placeholder="Email *" aria-describedby="email-notes"%s />',
 				( $html5 ? 'type="email"' : 'type="text"' ),
 				esc_attr( $commenter['comment_author_email'] ),
 				$html_req
@@ -2385,11 +2385,11 @@ function comment_form( $args = array(), $post_id = null ) {
 		'url'    => sprintf(
 			'<p class="comment-form-url">%s %s</p>',
 			sprintf(
-				'<label for="url">%s</label>',
+				'<label for="url"></label>',
 				__( 'Website' )
 			),
 			sprintf(
-				'<input id="url" name="url" %s value="%s" size="30" maxlength="200" />',
+				'<input id="url" name="url" %s value="%s" size="30" placeholder="Website" maxlength="200" />',
 				( $html5 ? 'type="url"' : 'type="text"' ),
 				esc_attr( $commenter['comment_author_url'] )
 			)
@@ -2437,10 +2437,10 @@ function comment_form( $args = array(), $post_id = null ) {
 		'comment_field'        => sprintf(
 			'<p class="comment-form-comment">%s %s</p>',
 			sprintf(
-				'<label for="comment">%s</label>',
+				'<label for="comment"></label>',
 				_x( 'Comment', 'noun' )
 			),
-			'<textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea>'
+			'<textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required" placeholder="What are you thinking..."></textarea>'
 		),
 		'must_log_in'          => sprintf(
 			'<p class="must-log-in">%s</p>',
@@ -2451,19 +2451,20 @@ function comment_form( $args = array(), $post_id = null ) {
 				wp_login_url( apply_filters( 'the_permalink', get_permalink( $post_id ), $post_id ) )
 			)
 		),
-		'logged_in_as'         => sprintf(
-			'<p class="logged-in-as">%s</p>',
-			sprintf(
-				/* translators: 1: Edit user link, 2: Accessibility text, 3: User name, 4: Logout URL. */
-				__( '<a href="%1$s" aria-label="%2$s">Logged in as %3$s</a>. <a href="%4$s">Log out?</a>' ),
-				get_edit_user_link(),
-				/* translators: %s: User name. */
-				esc_attr( sprintf( __( 'Logged in as %s. Edit your profile.' ), $user_identity ) ),
-				$user_identity,
-				/** This filter is documented in wp-includes/link-template.php */
-				wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ), $post_id ) )
-			)
-		),
+		
+		// 'logged_in_as'         => sprintf(
+		// 	'<p class="logged-in-as">%s</p>',
+		// 	sprintf(
+		// 		/* translators: 1: Edit user link, 2: Accessibility text, 3: User name, 4: Logout URL. */
+		// 		__( '<a href="%1$s" aria-label="%2$s">Logged in as %3$s</a>. <a href="%4$s">Log out?</a>' ),
+		// 		get_edit_user_link(),
+		// 		/* translators: %s: User name. */
+		// 		esc_attr( sprintf( __( 'Logged in as %s. Edit your profile.' ), $user_identity ) ),
+		// 		$user_identity,
+		// 		/** This filter is documented in wp-includes/link-template.php */
+		// 		wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ), $post_id ) )
+		// 	)
+		// ),
 		'comment_notes_before' => sprintf(
 			'<p class="comment-notes">%s%s</p>',
 			sprintf(
@@ -2488,7 +2489,7 @@ function comment_form( $args = array(), $post_id = null ) {
 		'cancel_reply_before'  => ' <small>',
 		'cancel_reply_after'   => '</small>',
 		'cancel_reply_link'    => __( 'Cancel reply' ),
-		'label_submit'         => __( 'Post Comment' ),
+		'label_submit'         => __( 'Share' ),
 		'submit_button'        => '<input name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" />',
 		'submit_field'         => '<p class="form-submit">%1$s %2$s</p>',
 		'format'               => 'xhtml',
@@ -2524,13 +2525,23 @@ function comment_form( $args = array(), $post_id = null ) {
 	 */
 	do_action( 'comment_form_before' );
 	?>
-	<div id="respond" class="<?php echo esc_attr( $args['class_container'] ); ?>">
-		<?php
-		echo $args['title_reply_before'];
+<div id="respond" class="<?php echo esc_attr( $args['class_container'] ); ?>">
+    <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab"
+                    aria-controls="posts" aria-selected="true">Make
+                    a Post</a>
+            </li>
+        </ul>
+    </div>
+    <div class="card-body">
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
 
-		comment_form_title( $args['title_reply'], $args['title_reply_to'] );
 
-		echo $args['cancel_reply_before'];
+                <?php
+	
 
 		cancel_comment_reply_link( $args['cancel_reply_link'] );
 
@@ -2716,8 +2727,11 @@ function comment_form( $args = array(), $post_id = null ) {
 
 		endif;
 		?>
-	</div><!-- #respond -->
-	<?php
+            </div>
+        </div>
+    </div>
+</div><!-- #respond -->
+<?php
 
 	/**
 	 * Fires after the comment form.

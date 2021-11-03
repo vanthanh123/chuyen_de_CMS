@@ -1,0 +1,24 @@
+.comment-respond #submit {
+    display: block;
+    margin-left: auto;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.card-body {
+    background: #ffffff;
+}
+
+.card-body .section-inner.thin {
+    max-width: 112rem;
+}
+
+#posts-tab {
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.comment-respond p:not(.comment-notes) {
+    max-width: 112rem !important;
+}
