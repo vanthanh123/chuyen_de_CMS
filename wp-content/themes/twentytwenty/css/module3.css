@@ -8,6 +8,7 @@
 
 .footer-widgets-outer-wrapper {
     padding-bottom: 0 !important;
+    border-bottom: none !important;
 }
 
 .footer-nav-widgets-wrapper,
