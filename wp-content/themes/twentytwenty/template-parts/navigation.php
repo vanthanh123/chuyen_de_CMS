@@ -22,9 +22,9 @@ if ($next_post || $prev_post) {
 	}
 
 ?>
+	<div class="container pagination-detail-page">
+		<nav class="pagination-single section-inner pagination-single-page<?php echo esc_attr($pagination_classes); ?>" aria-label="<?php esc_attr_e('Post', 'twentytwenty'); ?>" role="navigation">
 
-	<nav class="pagination-single section-inner pagination-single-page<?php echo esc_attr($pagination_classes); ?>" aria-label="<?php esc_attr_e('Post', 'twentytwenty'); ?>" role="navigation">
-		<div class="container">
 			<hr class="styled-separator is-style-wide" aria-hidden="true" />
 
 			<div class="pagination-single-inner list_news">
@@ -44,9 +44,9 @@ if ($next_post || $prev_post) {
 										$yearNextPost = date("y", strtotime($nextPostDateTime->post_date));
 										?>
 										<div class="headlinesday"><?php echo $dayNextPost
-																								?></div>
+																							?></div>
 										<div class="headlinesmonth"><?php echo $monthNextPost
-																									?></div>
+																								?></div>
 									</div>
 									<div class="headlinesyear"><?php echo $yearNextPost
 																							?></div>
@@ -79,9 +79,9 @@ if ($next_post || $prev_post) {
 										$yearPrevPost = date("y", strtotime($prevPostDateTime->post_date));
 										?>
 										<div class="headlinesday"><?php echo $dayPrevPost
-																								?></div>
+																							?></div>
 										<div class="headlinesmonth"><?php echo $monthPrevPost
-																									?></div>
+																								?></div>
 									</div>
 									<div class="headlinesyear"><?php echo $yearPrevPost
 																							?></div>
@@ -107,10 +107,10 @@ if ($next_post || $prev_post) {
 			</div><!-- .pagination-single-inner -->
 
 			<hr class="styled-separator is-style-wide" aria-hidden="true" />
-		</div>
 
 
-	</nav><!-- .pagination-single -->
 
+		</nav><!-- .pagination-single -->
+	</div>
 <?php
 }
