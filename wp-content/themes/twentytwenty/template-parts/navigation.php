@@ -25,7 +25,7 @@ if ($next_post || $prev_post) {
 	<div class="container pagination-detail-page">
 		<nav class="pagination-single section-inner pagination-single-page<?php echo esc_attr($pagination_classes); ?>" aria-label="<?php esc_attr_e('Post', 'twentytwenty'); ?>" role="navigation">
 
-			<hr class="styled-separator is-style-wide" aria-hidden="true" />
+			<!-- <hr class="styled-separator is-style-wide" aria-hidden="true" /> -->
 
 			<div class="pagination-single-inner list_news">
 				<div class="headlines">
@@ -106,7 +106,7 @@ if ($next_post || $prev_post) {
 
 			</div><!-- .pagination-single-inner -->
 
-			<hr class="styled-separator is-style-wide" aria-hidden="true" />
+			<!-- <hr class="styled-separator is-style-wide" aria-hidden="true" /> -->
 
 
 
