@@ -4,7 +4,7 @@
 
 .headlinestitle .link-pagination-title span {
   font-weight: 400;
-  font-size: initial;
+  /* font-size: initial; */
 }
 
 .pagination-single-page .list_news {
@@ -14,10 +14,12 @@
 .container .pagination-single-page {
   width: 100%;
   margin: 0;
+  font-size: larger;
+  font-family: NonBreakingSpaceOverride, "Hoefler Text", Garamond, "Times New Roman", serif;
 }
 
 .pagination-detail-page {
-  width: 60%;
+  width: 50%;
 }
 
 .list_news .headlines {
@@ -51,7 +53,7 @@
 
 .headlines .headlinesdate {
   /* font-size: 0.8em; */
-  font-size: initial;
+  /* font-size: initial; */
   width: 15%;
   min-width: 55px;
   display: table-cell;
