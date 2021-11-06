@@ -5,6 +5,7 @@
     justify-content:center;
     align-items:center;
     padding: 10px 0;
+    box-sizing: border-box;
 }
 .custom_post{
 	display: flex;
@@ -36,14 +37,22 @@
 	color: #2a6496 !important;
 }
 
+.custom_post .entry-content p{
+	color: #333 !important;
+	font-size: 13px !important;
+    text-decoration: none;
+    line-height: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+
 .custom_post .entry-content p a{
 	color: #428bca !important;
-	font-size: 18px !important;
     text-decoration: none;
 }
 
 .custom_post .entry-content p a:hover,.custom_post .entry-content p a:focus{
 	color: #2a6496 !important;
+    text-decoration: revert;
 }
 
 .custom_post .content_right_custom{

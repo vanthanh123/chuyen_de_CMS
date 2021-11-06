@@ -36,10 +36,9 @@ if (!is_single()) {
 			<div class="day"><?php echo $day ?></div>
 			<div class="month">Tháng <?php echo $month ?></div>
 		</div>
-
+		<div class="content_right_custom">
 	<?php } ?>
 
-	<div class="content_right_custom">
 		<?php
 
 		get_template_part('template-parts/entry-header');
@@ -64,7 +63,7 @@ if (!is_single()) {
 						$post = get_post();
 						$post_content =  $post->post_content;
 						$date_post = $post->post_date;
-						$subpost = substr($post_content, 0, 100);
+						$subpost = substr($post_content, 0, 110);
 						echo $subpost . '<a href="' . esc_url(get_permalink()) . '">[...]</a>';
 					}
 				}
