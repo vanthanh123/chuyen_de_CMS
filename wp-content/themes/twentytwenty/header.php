@@ -35,6 +35,7 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/module3.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/module8.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/module6.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/module7.css">
 </head>
 
 <body <?php body_class(); ?>>
