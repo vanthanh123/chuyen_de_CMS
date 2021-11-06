@@ -11,13 +11,18 @@
   justify-content: center;
 }
 
+.pagination-single-page .container {
+  width: 70%;
+}
+
 .list_news .headlines {
     background: #fff;
 }
 
 .headlines {
   overflow: hidden;
-  padding: 20px 30px;
+  padding: 20px 40px;
+  width: 100%;
 }
 
 .headlines ul {
@@ -72,6 +77,7 @@
   vertical-align: middle;
   /* width: 85%; */
   width: 100%;
+  padding: 0 50px;
 }
 
 .list_news .headlines a {
