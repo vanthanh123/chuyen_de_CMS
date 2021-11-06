@@ -35,7 +35,7 @@ if (is_single()) {
 		<?php } ?>
 		<div class="post-inner <?php echo is_page_template('templates/template-full-width.php') ? '' : 'thin'; ?> ">
 
-			<div class="entry-content">
+			<div class="entry-content <?php if(is_single()) echo 'entry-content-detail-page' ?>">
 
 				<?php
 				if (is_search() || !is_singular() && 'summary' === get_theme_mod('blog_content', 'full')) {

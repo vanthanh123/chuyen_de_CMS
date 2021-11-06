@@ -20,9 +20,9 @@ if (is_single()) {
 ?>
 
 <header class="entry-header has-text-align-center<?php echo esc_attr($entry_header_classes); ?>">
-<?php if(is_single()){?>
-	<div class="row">
-<?php } ?>
+	<?php if (is_single()) { ?>
+		<div class="row">
+		<?php } ?>
 		<div class="entry-header-inner section-inner medium <?= $class_Identify_column ?>">
 
 			<?php
@@ -49,7 +49,11 @@ if (is_single()) {
 			}
 
 			if (is_singular()) {
-				the_title('<h1 class="entry-title">', '</h1>');
+				if (is_single()) {
+					the_title('<h1 class="entry-title entry-title-detail-page">', '</h1>');
+				} else {
+					the_title('<h1 class="entry-title ">', '</h1>');
+				}
 			} else {
 				the_title('<h2 class="entry-title heading-size-1"><a href="' . esc_url(get_permalink()) . '">', '</a></h2>');
 			}
@@ -89,13 +93,13 @@ if (is_single()) {
 			<div class="col-lg-2">
 				<div class="headlinesdate">
 					<div class="headlinesdm">
-						<div class="headlinesday"><?=$day?></div>
-						<div class="headlinesmonth"><?=$month?></div>
+						<div class="headlinesday"><?= $day ?></div>
+						<div class="headlinesmonth"><?= $month ?></div>
 					</div>
-					<div class="headlinesyear">'<?=$year?></div>
+					<div class="headlinesyear">'<?= $year ?></div>
 				</div>
 			</div>
+		</div>
+	<?php } ?>
 	</div>
-<?php } ?>
-</div>
 </header><!-- .entry-header -->
