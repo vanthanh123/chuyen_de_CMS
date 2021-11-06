@@ -13,7 +13,7 @@
 get_header();
 if (is_single()) {
 ?>
-<div class="container">
+<div class="container header-detai-page">
 <?php } ?>
 	<main id="site-content" role="main">
 

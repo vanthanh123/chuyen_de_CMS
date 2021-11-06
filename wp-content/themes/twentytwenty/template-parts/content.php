@@ -30,7 +30,7 @@ if (is_single()) {
 	}
 	if (is_single()) {
 	?>
-		<div class="container">
+		<div class="container body-detail-page">
 			<div class="overviewline"></div>
 		<?php } ?>
 		<div class="post-inner <?php echo is_page_template('templates/template-full-width.php') ? '' : 'thin'; ?> ">

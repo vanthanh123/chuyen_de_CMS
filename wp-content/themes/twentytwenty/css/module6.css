@@ -1,3 +1,11 @@
+.header-detai-page {
+  width: 60%;
+}
+
+.body-detail-page{
+  width: 60%;
+}
+
 /* hidden categories  */
 .detail-page .entry-categories {
   display: none;
