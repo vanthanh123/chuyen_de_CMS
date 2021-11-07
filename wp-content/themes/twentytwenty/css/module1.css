@@ -10,7 +10,6 @@
 
 .custom-header .header-inner .header-titles-wrapper{
     margin: 0 !important;
-    cursor: pointer;
 }
 
 .custom-header .header-titles{
@@ -23,7 +22,6 @@
     font-size: 18px;
     line-height: 20px;
     color: #777;
-    cursor: pointer;
 }
 
 .custom-header .header-titles .site-description{
@@ -33,6 +31,11 @@
     line-height:20px;
     height: 100%;
     padding: 34px 20px;
+}
+
+.custom-header .header-titles .site-description a{
+    color: #555;
+    text-decoration: none;
 }
 
 .custom-header .toggle-wrapper::before{
