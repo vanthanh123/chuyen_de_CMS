@@ -14,11 +14,7 @@
 	width: 500px;
     min-height: 210px;
     font-family: 'Open Sans', sans-serif !important;
-}
-
-.custom_post:nth-child(1){
     padding: 0 !important;
-
 }
 
 .custom_post .entry-header-inner h2{
