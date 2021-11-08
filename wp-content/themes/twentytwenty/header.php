@@ -19,9 +19,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
 
 		<link rel="profile" href="https://gmpg.org/xfn/11">
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
 		<?php wp_head(); ?>
-
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/module4.css">
 	</head>
 
 	<body <?php body_class(); ?>>
