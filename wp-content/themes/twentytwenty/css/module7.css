@@ -67,7 +67,7 @@
 
 .headlinesdate-navigation .headlinesyear {
   line-height: 3.5em;
-  float: left;
+  /* float: left; */
   margin-left: 3px;
 }
 
