@@ -17,6 +17,10 @@
   border-left: 1px solid #666;
 }
 
+.featured-media {
+  margin: 30px 0px;
+}
+
 .topnewstime > .topnewsdate {
   font-family: "Prata", serif;
   font-size: 4.6em;
