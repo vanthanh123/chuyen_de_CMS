@@ -22,7 +22,7 @@ if ($next_post || $prev_post) {
 	}
 
 ?>
-	<div class="container pagination-detail-page">
+	<div class="pagination-detail-page">
 		<nav class="pagination-single section-inner pagination-single-page<?php echo esc_attr($pagination_classes); ?>" aria-label="<?php esc_attr_e('Post', 'twentytwenty'); ?>" role="navigation">
 
 			<!-- <hr class="styled-separator is-style-wide" aria-hidden="true" /> -->
@@ -34,7 +34,7 @@ if ($next_post || $prev_post) {
 						if ($next_post) {
 						?>
 							<li>
-								<div class="headlinesdate">
+								<div class="headlinesdate-navigation">
 									<div class="headlinesdm">
 										<?php
 										$nextPostDateTime = get_post($next_post->ID);
@@ -69,7 +69,7 @@ if ($next_post || $prev_post) {
 						?>
 
 							<li>
-								<div class="headlinesdate">
+								<div class="headlinesdate-navigation">
 									<div class="headlinesdm">
 										<?php
 										$prevPostDateTime = get_post($prev_post->ID);
