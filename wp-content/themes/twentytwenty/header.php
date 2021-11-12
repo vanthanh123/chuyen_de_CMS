@@ -190,8 +190,9 @@
 						}
 						?>
 						<div class="toggle-wrapper accout-toggle-wrapper">
+						<i class="fa fa-user-circle-o"></i>
+
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-								<i class="fa fa-user-circle-o"></i>
 								Account <span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
